@@ -28,10 +28,13 @@ class SurveyComponent extends Component {
      {name:"name", type:"text", title: "Component İsmi:", placeHolder:"Component adini giriniz", isRequired: true, autoComplete: "name"},
      { type: "dropdown", name: "type", title: "Component tipini seçiniz", isRequired: true, colCount: 0,
      choices: ["Text", "Dropdown", "Radio"] },
-     { type: "radiogroup", name: "spc", title: "Component Özelliklerini seçiniz", isRequired: true, 
-     colCount: 4, choices: ["isRequired", "notRequired"] },
-     { type: "radiogroup", name: "spc2", title: "Component Özelliklerini seçiniz", isRequired: true, 
-     colCount: 3, choices: ["ReadOnly", "notReadOnly"] }
+     { type: "radiogroup", name: "spc", title: "Component Özelliklerini seçiniz", isRequired: false, 
+     colCount: 4, choices: ["isRequired"] },
+     { type: "radiogroup", name: "spc2", title: "Component Özelliklerini seçiniz", isRequired: false, 
+     colCount: 3, choices: ["ReadOnly"] },
+     { type: "radiogroup", name: "source", title: "Component Kaynağini seçiniz", isRequired: true, 
+     colCount: 3, choices: ["WebService", "DatabaseQuery"] },
+     { type: "comment", name: "query", title:"WebService|DatabaseQuery giriniz" }
 ]};
 
 const survey = new Survey.Model(json);
