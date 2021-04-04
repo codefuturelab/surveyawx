@@ -24,5 +24,17 @@ body {
   div.c {
     position: absolute;
     left: 320px;
+    top: 50px;
+
     
   } 
+
+  div.b {
+    position: absolute;
+    left: 320px;
+
+  } 
+
+  .div_r{
+    float:right;
+    }
